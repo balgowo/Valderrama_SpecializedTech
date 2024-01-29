@@ -1,68 +1,179 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
 }
+
 a:hover {
-  color: #535bf2;
+    color: #535bf2;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+    font-size: 3.2em;
+    line-height: 1.1;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+    border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+    outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+     :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+    a:hover {
+        color: #747bff;
+    }
+    button {
+        background-color: #f9f9f9;
+    }
+}
+
+
+/* ------------------ HOME.TSX CSS ------------------*/
+
+.content-wrapper {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-radius: 24px;
+    padding: 10px;
+}
+
+.header {
+    font-style: italic;
+}
+
+.nameHolder {
+    display: flex;
+    /* background-color: aqua; */
+    padding: 16px;
+}
+
+.functionButtons {
+    display: flex;
+    width: 100%;
+    /* background-color: #535bf2; */
+    padding: 16px;
+}
+
+.col {
+    margin: 5px;
+}
+
+.nameHolderContent {
+    margin: 5px;
+}
+
+.hobbyCard {
+    /* background-color: chocolate; */
+}
+
+.hobbyCard .card-body {
+    text-align: left;
+}
+
+.hobbyCard .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.full-width-button {
+    width: 100%;
+}
+
+
+/* ------------------ CALCULATORBUTTON.TSX (COMPONENT) / CALCULATOR.TSX CSS ------------------*/
+
+.calculatorWrapper {
+    margin-top: 40px;
+    background-color: #5a5a5a;
+    width: 400px;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.buttonWrapper {
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: white;
+    color: black;
+    flex: 1;
+    margin: 4px;
+    border-radius: 25px;
+}
+
+.calcRow {
+    display: flex;
+}
+
+.clearButton {
+    width: 100%;
+    border-radius: 25px !important;
+    padding: 10px !important;
+}
+
+
+/* ------------------ INPUT.TSX CSS ------------------*/
+
+.inputWrapper {
+    height: 10em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.result {
+    flex: 1;
+    font-size: 24px;
+}
+
+.text {
+    flex: 1;
+    font-size: 18px;
 }
