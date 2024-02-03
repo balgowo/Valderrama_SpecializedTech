@@ -1,4 +1,3 @@
-import React from 'react'
 import '../App.css'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -56,8 +55,8 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="hobbyCard">
-          <Card style={{ width: '100%' }}>
+        <div className="MyHobbyCard">
+          <Card className="MyHobbyCardContainer"style={{ width: '100%' }}>
             <Card.Body>
               <Card.Title>My Hobbies</Card.Title>
               <Card.Text>

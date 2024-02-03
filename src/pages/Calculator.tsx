@@ -1,4 +1,3 @@
-import React from 'react'
 import '../App.css'
 import { Link, useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -26,12 +25,12 @@ export default function Calculator() {
   const [expression, setExpression] = useState<string[]>([""]);
 
   const addToExpression = (val: string) => {
-    setExpression((expression) => [...expression, val + " "]);
+    setExpression((expression) => [...expression, val]);
   }
 
   const clearInput = () => {
-    setExpression ("");
-    setResult ("");
+    setExpression ([]);
+    setResult ([]);
   }
 
   const calculateExpression = () => {

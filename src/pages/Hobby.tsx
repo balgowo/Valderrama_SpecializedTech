@@ -1,4 +1,3 @@
-import React from 'react'
 import '../App.css'
 import { Link, useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -7,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import HobbyCard from '../components/HobbyCard';
 
 export default function Hobby() {
   const navigate = useNavigate();
@@ -35,9 +35,17 @@ export default function Hobby() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        
-      <div>
-        hobby
+  
+      <div className="hobbyWrapper">
+        <h1>SHEEEEEEEEEEEEEEEEEEESH</h1>
+        <div className="hobbyCardHolder">
+          <HobbyCard imageSrc = "./image1.jpg" hobbyName="Basketball" hobbyDesc="i love basketball"/>
+          <HobbyCard imageSrc = "./image2.jpg" hobbyName="Gaming" hobbyDesc="i love gaming"/>
+          <HobbyCard imageSrc = "./image3.jpg" hobbyName="Watching Shows/Movies" hobbyDesc="i love watchingi love watchingi love watchingi love watching"/>
+          <HobbyCard imageSrc = "./image2.jpg" hobbyName="Gaming" hobbyDesc="i love gaming"/>
+          <HobbyCard imageSrc = "./image1.jpg" hobbyName="Basketball" hobbyDesc="i love basketball"/>
+          <HobbyCard imageSrc = "./image2.jpg" hobbyName="Gaming" hobbyDesc="i love gaming"/>
+        </div>
       </div>
     </>
     
