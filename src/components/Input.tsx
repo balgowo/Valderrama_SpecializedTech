@@ -1,8 +1,12 @@
 import '../App.css'
 
-import React from 'react'
+interface InputProps {
+    expression: string[];
+    result: string[];
+}
 
-export default function Input({expression, result}) {
+
+export default function Input({expression, result}: InputProps) {
     return (
         <div className="inputWrapper">
             <div className="result">

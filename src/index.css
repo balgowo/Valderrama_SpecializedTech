@@ -105,15 +105,15 @@ button:focus-visible {
     margin: 5px;
 }
 
-.hobbyCard {
-    /* background-color: chocolate; */
+.MyHobbyCardContainer {
+    border-style: none !important;
 }
 
-.hobbyCard .card-body {
+.MyHobbyCard .card-body {
     text-align: left;
 }
 
-.hobbyCard .btn {
+.MyHobbyCard .btn {
     width: 100%;
     text-align: center;
 }
@@ -176,4 +176,60 @@ button:focus-visible {
 .text {
     flex: 1;
     font-size: 18px;
+}
+
+
+/* ------------------ Hobby.TSX/HobbyCard.tsx CSS ------------------*/
+
+@media (max-width: 768px) {
+    .hobbyCardHolder {
+        flex-direction: column;
+    }
+    .hobbyWrapper {
+        margin-top: 50px !important;
+    }
+}
+
+.hobbyWrapper {
+    margin-top: 20px !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.hobbyCardHolder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.hobbyCardContainer {
+    width: 18rem;
+    margin: 10px;
+    display: flex;
+}
+
+.hobbyCards {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-style: none !important;
+    height: 300px !important;
+    overflow: scroll !important;
+}
+
+.hobbyCards::-webkit-scrollbar {
+    display: none !important;
+}
+
+.hobbyCards img {
+    object-fit: cover;
+    height: 150px;
+}
+
+.hobbyCardBody {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    flex: 1;
 }
