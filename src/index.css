@@ -233,3 +233,56 @@ button:focus-visible {
     justify-content: space-between !important;
     flex: 1;
 }
+
+
+/* ------------------ Hobby.TSX/HobbyCard.tsx CSS ------------------*/
+
+@media (max-width: 768px) {
+    .JSONCardHolder {
+        flex-direction: column;
+    }
+    .JSONWrapper {
+        margin-top: 50px !important;
+    }
+}
+
+.JSONWrapper {
+    margin-top: 20px !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.JSONCardHolder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.JSONCardContainer {
+    width: 18rem;
+    margin: 10px;
+    display: flex;
+}
+
+.JSONCards {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-style: none !important;
+    height: 300px !important;
+    overflow: scroll !important;
+    border-style: solid !important;
+    border-width: 1 !important;
+}
+
+.JSONCards::-webkit-scrollbar {
+    display: none !important;
+}
+
+.JSONCardBody {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    flex: 1;
+}
