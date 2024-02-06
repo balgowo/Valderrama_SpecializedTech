@@ -1,30 +1,43 @@
-import '../App.css'
-import { Link, useNavigate } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import * as math from "mathjs";
+import { useState } from "react";
+import '../App.css';
 import CalculatorButton from '../components/CalculatorButton';
 import Input from '../components/Input';
-import { useState } from "react";
-import * as math from "mathjs";
 
 export default function Calculator() {
-  const navigate = useNavigate();
+
   const buttonColor = "royalblue";
 
-  const handleDropdownSelect = (eventKey: string | null) => {
-    if (eventKey) {
-      navigate(eventKey);
-    }
-  };
 
   const [result, setResult] = useState<string[]>([""]);
   const [expression, setExpression] = useState<string[]>([""]);
 
   const addToExpression = (val: string) => {
+    const lastChar = expression[expression.length - 1];
+
+    // Check for consecutive operators
+    const isOperator = ["+", "-", "*", "/"].includes(val);
+    const isLastCharOperator = ["+", "-", "*", "/"].includes(lastChar);
+  
+    // Check for leading zero after an operator or at the start of the expression
+    if ((isOperator || expression.length === 0) && val === "0" && lastChar !== ".") {
+      return;
+    }
+  
+    // Check for consecutive decimal points
+    if (val === "." && lastChar === ".") {
+      return;
+    }
+  
+    // Check for leading zero after a decimal point, excluding multiple zeros
+    if (lastChar === "." && val === "0" && !/[1-9]/.test(expression.join(""))) {
+      return;
+    }
+  
+    // Check for inputting zero after an operator
+    if (lastChar && isLastCharOperator && val === "0" && lastChar !== ".") {
+      return;
+    }
     setExpression((expression) => [...expression, val]);
   }
 
@@ -47,24 +60,6 @@ export default function Calculator() {
 
   return (
     <>
-    <Navbar expand="lg" className="bg-body-tertiary" fixed="top" bg="dark" data-bs-theme="dark">
-        <Container>
-          <Link to="/">
-            <Navbar.Brand><FontAwesomeIcon icon={faHome} /></Navbar.Brand>
-          </Link>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <NavDropdown title="" id="basic-nav-dropdown" onSelect={handleDropdownSelect}>
-                <NavDropdown.Item eventKey="/calculator">Calculator</NavDropdown.Item>
-                <NavDropdown.Item eventKey="/hobby">Hobbies</NavDropdown.Item>
-                <NavDropdown.Item eventKey="/json">JSON</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      
       <div className="calculatorWrapper">
         <Input expression={expression} result={result}/>
         <div className="calcRow">

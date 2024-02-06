@@ -7,10 +7,12 @@ import Home from './pages/Home.tsx';
 import Calculator from './pages/Calculator.tsx';
 import Hobby from './pages/Hobby.tsx';
 import JSON from './pages/JSON.tsx';
+import NavbarComponent from './components/NavbarComponent.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
+    <NavbarComponent/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/calculator" element={<Calculator/>}></Route>
