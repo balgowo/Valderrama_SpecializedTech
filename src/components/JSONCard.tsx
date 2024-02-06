@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 interface JSONCardProps {
     user: {
         name: string;
-        userName: string;
+        username: string;
         email: string;
         address: {
             street: string;
@@ -21,13 +21,13 @@ export default function JSONCard({user}: JSONCardProps ) {
             <div className="JSONCardContainer">
                 <Card className="JSONCards">
                     <Card.Body className="JSONCardBody">
-                        <Card.Title>{user.name}</Card.Title>
-                        <Card.Text>{user.userName}</Card.Text>
-                        <Card.Text>Email:{" " + user.email}</Card.Text>
-                        <Card.Text>Address: {" " + user.address.street}</Card.Text>
-                        <Card.Text>Suite: {" " + user.address.suite}</Card.Text>
-                        <Card.Text>City: {" " + user.address.city}</Card.Text>
-                        <Card.Text>Zip Code:{" " + user.address.zipcode}</Card.Text>
+                        <Card.Title><h3>{user.name}</h3></Card.Title>
+                        <Card.Text><b>Username: </b>{user.username}</Card.Text>
+                        <Card.Text><b>Email:</b>{" " + user.email}</Card.Text>
+                        <Card.Text><b>Address:</b> {" " + user.address.street}</Card.Text>
+                        <Card.Text><b>Suite: </b>{" " + user.address.suite}</Card.Text>
+                        <Card.Text><b>City: </b>{" " + user.address.city}</Card.Text>
+                        <Card.Text><b>Zip Code:</b>{" " + user.address.zipcode}</Card.Text>
                     </Card.Body>
                 </Card>
             </div>
