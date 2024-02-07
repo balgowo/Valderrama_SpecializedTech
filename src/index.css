@@ -9,6 +9,8 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    --milky-yellow: #FAF3DD;
+    --milky-green: #D8E2DC;
 }
 
 a {
@@ -27,6 +29,7 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
+    background: linear-gradient(135deg, var(--milky-yellow), var(--milky-green));
 }
 
 h1 {
@@ -107,6 +110,7 @@ button:focus-visible {
 
 .MyHobbyCardContainer {
     border-style: none !important;
+    background-color: transparent !important;
 }
 
 .MyHobbyCard .card-body {
@@ -120,6 +124,10 @@ button:focus-visible {
 
 .full-width-button {
     width: 100%;
+}
+
+.nameHolderContent {
+    background-color: transparent !important;
 }
 
 
@@ -147,9 +155,10 @@ button:focus-visible {
     border-radius: 25px;
 }
 
-.buttonWrapper:hover{
+.buttonWrapper:hover {
     background-color: darkgray;
 }
+
 .calcRow {
     display: flex;
 }
@@ -197,7 +206,7 @@ button:focus-visible {
     /* .hobbyBody {
         width: 100%;
     }  */
-    .hobbyBody .hobbyWrapper h1{
+    .hobbyBody .hobbyWrapper h1 {
         font-size: 5vw;
         border-style: solid;
     }
@@ -205,14 +214,13 @@ button:focus-visible {
         width: 1vw;
         height: 1vw;
     } */
-
 }
 
 .hobbyWrapper {
     margin-top: 20px !important;
     padding-top: 50px;
     padding-bottom: 50px;
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -224,30 +232,29 @@ button:focus-visible {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
 }
 
 .hobbyCardContainer {
     width: 18rem;
-  margin: 10px;
-  display: flex;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+    margin: 10px;
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
+
 .hobbyCardContainer:hover {
     transform: translateY(-5px);
-  }
+}
 
 .hobbyCards {
     display: flex;
     flex-direction: column;
     flex: 1;
     border-style: none !important;
-    height: 250px !important;
+    height: 350px !important;
     overflow: scroll !important;
-
 }
 
 .hobbyCards::-webkit-scrollbar {
@@ -267,32 +274,34 @@ button:focus-visible {
     align-items: center;
     padding: 1rem
 }
-.hobbyBody {
-    display:flex;
-    align-items: center !important;
-    justify-content: center !important; 
 
+.hobbyBody {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
     width: 100%;
 }
-.hobbyBody .hobbyWrapper h1{
+
+.hobbyBody .hobbyWrapper h1 {
     font-size: 5vw;
     width: 100%;
     font-style: italic;
 }
 
-.hobbyDescription{
-    text-align:  left;
+.hobbyDescription {
+    text-align: left;
 }
 
 .hobbyCardBody .hobbyName {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-  
-  .hobbyCardBody .hobbyDescription {
+}
+
+.hobbyCardBody .hobbyDescription {
     font-size: 1rem;
     text-align: justify;
-  }
+}
+
 
 /* ------------------ Hobby.TSX/HobbyCard.tsx CSS ------------------*/
 
@@ -303,7 +312,7 @@ button:focus-visible {
     .JSONWrapper {
         margin-top: 50px !important;
     }
-    .JSONbody .JSONWrapper h1{
+    .JSONbody .JSONWrapper h1 {
         font-size: 5vw;
         border-style: solid;
     }
@@ -313,9 +322,7 @@ button:focus-visible {
     margin-top: 20px !important;
     padding-top: 50px;
     padding-bottom: 50px;
-    width: 50%;
-    border-style: solid;
-    border-color: pink;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -333,6 +340,14 @@ button:focus-visible {
     width: 18rem;
     margin: 10px;
     display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.JSONCardContainer:hover {
+    transform: translateY(-5px);
 }
 
 .JSONCards {
@@ -340,9 +355,8 @@ button:focus-visible {
     flex-direction: column;
     flex: 1;
     border-style: none !important;
-    height: 200px !important;
+    height: 350px !important;
     overflow: scroll !important;
-    border-style: solid !important;
     text-align: left;
 }
 
@@ -360,17 +374,14 @@ button:focus-visible {
 }
 
 .JSONbody {
-    display:flex;
+    display: flex;
     align-items: center !important;
     justify-content: center !important;
-    border-style: solid;
-    border-color: red;
     width: 100%;
 }
 
-.JSONbody .JSONWrapper h1{
+.JSONbody .JSONWrapper h1 {
     font-size: 5vw;
-    border-style: solid;
     width: 100%;
     font-style: italic;
 }

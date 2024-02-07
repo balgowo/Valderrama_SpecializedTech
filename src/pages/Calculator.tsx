@@ -35,7 +35,7 @@ export default function Calculator() {
     }
   
     // Check for leading zero after a decimal point, excluding multiple zeros
-    if (lastChar === "." && val === "0" && !/[1-9]/.test(expression.join(""))) {
+    if (lastChar === "." && val === "0" && (!/[1-9]/.test(expression.join("")) || expression.join("").indexOf('.') === -1) && (/[1-9]/.test(expression.join("")) || expression.join("").indexOf('.') === -1)) {
       return;
     }
   
