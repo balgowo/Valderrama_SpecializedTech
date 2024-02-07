@@ -131,6 +131,7 @@ button:focus-visible {
     width: 400px;
     border-radius: 16px;
     padding: 10px;
+    border-style: solid;
 }
 
 .buttonWrapper {
@@ -185,12 +186,26 @@ button:focus-visible {
 /* ------------------ Hobby.TSX/HobbyCard.tsx CSS ------------------*/
 
 @media (max-width: 768px) {
-    .hobbyCardHolder {
+    /* .hobbyCardHolder {
         flex-direction: column;
-    }
+        justify-content: center;
+        align-items: center;
+    } */
     .hobbyWrapper {
         margin-top: 50px !important;
     }
+    /* .hobbyBody {
+        width: 100%;
+    }  */
+    .hobbyBody .hobbyWrapper h1{
+        font-size: 5vw;
+        border-style: solid;
+    }
+    /* .hobbyCards{
+        width: 1vw;
+        height: 1vw;
+    } */
+
 }
 
 .hobbyWrapper {
@@ -198,6 +213,12 @@ button:focus-visible {
     padding-top: 50px;
     padding-bottom: 50px;
     width: 50%;
+    border-style: solid;
+    border-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .hobbyCardHolder {
@@ -205,6 +226,7 @@ button:focus-visible {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
 }
 
 .hobbyCardContainer {
@@ -220,6 +242,8 @@ button:focus-visible {
     border-style: solid !important;
     height: 250px !important;
     overflow: scroll !important;
+    border-style: solid !important;
+    border-color: blue !important;
 }
 
 .hobbyCards::-webkit-scrollbar {
@@ -241,8 +265,19 @@ button:focus-visible {
     display:flex;
     align-items: center !important;
     justify-content: center !important;
+    border-style: solid;
+    border-color: red;
+    width: 100%;
+}
+.hobbyBody .hobbyWrapper h1{
+    font-size: 5vw;
+    border-style: solid;
+    width: 100%;
 }
 
+.hobbyDescription{
+    text-align:  left;
+}
 
 /* ------------------ Hobby.TSX/HobbyCard.tsx CSS ------------------*/
 
@@ -253,6 +288,10 @@ button:focus-visible {
     .JSONWrapper {
         margin-top: 50px !important;
     }
+    .JSONbody .JSONWrapper h1{
+        font-size: 5vw;
+        border-style: solid;
+    }
 }
 
 .JSONWrapper {
@@ -260,6 +299,12 @@ button:focus-visible {
     padding-top: 50px;
     padding-bottom: 50px;
     width: 50%;
+    border-style: solid;
+    border-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .JSONCardHolder {
@@ -303,4 +348,13 @@ button:focus-visible {
     display:flex;
     align-items: center !important;
     justify-content: center !important;
+    border-style: solid;
+    border-color: red;
+    width: 100%;
+}
+
+.JSONbody .JSONWrapper h1{
+    font-size: 5vw;
+    border-style: solid;
+    width: 100%;
 }

@@ -13,8 +13,8 @@ export default function HobbyCard({imageSrc, hobbyName, hobbyDesc}: HobbyCardPro
             <Card className="hobbyCards">
                 <Card.Img variant="top" src={imageSrc} />
                 <Card.Body className="hobbyCardBody">
-                    <Card.Title>{hobbyName}</Card.Title>
-                    <Card.Text>{hobbyDesc}</Card.Text>
+                    <Card.Title className="hobbyName">{hobbyName}</Card.Title>
+                    <Card.Text className="hobbyDescription">{hobbyDesc}</Card.Text>
                 </Card.Body>
             </Card>
         </div>

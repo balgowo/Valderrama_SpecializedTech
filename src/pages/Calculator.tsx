@@ -14,10 +14,15 @@ export default function Calculator() {
 
   const addToExpression = (val: string) => {
     const lastChar = expression[expression.length - 1];
-
+  
     // Check for consecutive operators
     const isOperator = ["+", "-", "*", "/"].includes(val);
     const isLastCharOperator = ["+", "-", "*", "/"].includes(lastChar);
+  
+    // Check for consecutive operators
+    if (isOperator && isLastCharOperator) {
+      return;
+    }
   
     // Check for leading zero after an operator or at the start of the expression
     if ((isOperator || expression.length === 0) && val === "0" && lastChar !== ".") {
@@ -38,8 +43,9 @@ export default function Calculator() {
     if (lastChar && isLastCharOperator && val === "0" && lastChar !== ".") {
       return;
     }
+  
     setExpression((expression) => [...expression, val]);
-  }
+  };
 
   const clearInput = () => {
     setExpression ([]);
@@ -83,10 +89,10 @@ export default function Calculator() {
         <div className="calcRow">
           <CalculatorButton value="0" color={undefined} handleClick={addToExpression}/>
           <CalculatorButton value="." color={undefined} handleClick={addToExpression}/>
-          <CalculatorButton value="=" color={undefined} handleClick={calculateExpression}/>
+          <CalculatorButton value="=" color={"green"} handleClick={calculateExpression}/>
           <CalculatorButton value="-" color={buttonColor} handleClick={addToExpression}/>
         </div>
-        <CalculatorButton value="Clear" color={"royalblue"} handleClick={clearInput} />
+        <CalculatorButton value="Clear" color={"red"} handleClick={clearInput} />
       </div>
     </>
 

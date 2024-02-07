@@ -36,7 +36,7 @@ export default function JSON() {
     <>
       <div className="JSONbody">
         <div className="JSONWrapper">
-          <h1>SHEEEEEEEEEEEEEEEEEEESH</h1>
+          <h1>JSON DATA</h1>
           <div className="JSONCardHolder">
           {users.map((user) => (
             <JSONCard key={user.name} user={user} />
