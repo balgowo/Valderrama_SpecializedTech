@@ -21,8 +21,9 @@ export default function JSON() {
     const fetchData = async () => {
       try {
         const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        console.log("this is response: ", response);
         const data = await response.json();
-        console.log(data);
+        console.log("this is data", data);
         setUsers(data);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -39,7 +40,7 @@ export default function JSON() {
           <h1>JSON DATA</h1>
           <div className="JSONCardHolder">
           {users.map((user) => (
-            <JSONCard key={user.name} user={user} />
+            <JSONCard user={user} />
           ))}
           </div>
         </div>

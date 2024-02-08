@@ -208,7 +208,6 @@ button:focus-visible {
     }  */
     .hobbyBody .hobbyWrapper h1 {
         font-size: 5vw;
-        border-style: solid;
     }
     /* .hobbyCards{
         width: 1vw;
@@ -253,7 +252,7 @@ button:focus-visible {
     flex-direction: column;
     flex: 1;
     border-style: none !important;
-    height: 350px !important;
+    height: 300px !important;
     overflow: scroll !important;
 }
 
@@ -306,15 +305,14 @@ button:focus-visible {
 /* ------------------ Hobby.TSX/HobbyCard.tsx CSS ------------------*/
 
 @media (max-width: 768px) {
-    .JSONCardHolder {
+    /* .JSONCardHolder {
         flex-direction: column;
-    }
+    } */
     .JSONWrapper {
         margin-top: 50px !important;
     }
     .JSONbody .JSONWrapper h1 {
         font-size: 5vw;
-        border-style: solid;
     }
 }
 
@@ -355,7 +353,7 @@ button:focus-visible {
     flex-direction: column;
     flex: 1;
     border-style: none !important;
-    height: 350px !important;
+    height: 300px !important;
     overflow: scroll !important;
     text-align: left;
 }

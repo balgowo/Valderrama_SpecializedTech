@@ -13,7 +13,7 @@ export default function Hobby() {
             <HobbyCard imageSrc = "./image3.jpg" hobbyName="Watching Shows/Movies" hobbyDesc="As I was turning as a young adult, my time for playing sports or games have decreased significantly. I just want to rest most of the time, and with rest comes a long list of movies to watch. Now, I mostly spend my rest days with waching movies or shows"/>
             <HobbyCard imageSrc = "./image2.jpg" hobbyName="Gaming" hobbyDesc="i love gaming"/>
             <HobbyCard imageSrc = "./image1.jpg" hobbyName="Basketball" hobbyDesc="i love basketball"/>
-            <HobbyCard imageSrc = "./image2.jpg" hobbyName="Gaming" hobbyDesc="i love gaming"/>
+            <HobbyCard imageSrc = "./image3.jpg" hobbyName="Gaming" hobbyDesc="i love watching"/>
           </div>
         </div>
       </div>
